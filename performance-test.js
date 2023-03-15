@@ -9,5 +9,4 @@ export const options = {
 
 export default function () {
   http.get('https://orders-andresc-owggo4.5sc6y6-3.usa-e2.cloudhub.io/orders');
-  sleep(1);
 }
