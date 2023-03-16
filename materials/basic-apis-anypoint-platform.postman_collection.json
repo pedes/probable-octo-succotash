@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "fb7dbc93-bc13-47f6-8878-79425bd3ab35",
+		"name": "Basic APIs Anypoint Platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16562286"
+	},
+	"item": [
+		{
+			"name": "Login with Username/Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"your-user\",\"password\": \"your-password\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://anypoint.mulesoft.com/accounts/login",
+					"protocol": "https",
+					"host": [
+						"anypoint",
+						"mulesoft",
+						"com"
+					],
+					"path": [
+						"accounts",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login with client_id/secret (Connected app)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"client_id\"     : \"fdba4759e04a4b94a8cabb82ffe7cf23\",\n    \"client_secret\" : \"D077508EceE143fA84CCF4b5e3Ee06AF\",\n    \"grant_type\"    : \"client_credentials\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"anypoint",
+						"mulesoft",
+						"com"
+					],
+					"path": [
+						"accounts",
+						"api",
+						"v2",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
